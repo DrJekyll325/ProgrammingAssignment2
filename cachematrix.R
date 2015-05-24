@@ -1,11 +1,43 @@
-## Put comments here that give an overall description of what your
-## functions do
+##	R Programming - Assignment 2
+##	Create makeCacheMatrix and solveMatrix functions
 
-## Write a short comment describing this function
+
+##	makeCacheMatrix creates a list containing functions to set and
+##	get a matrix and set and get its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
+	i <- NULL
 
+
+	set <- function(y)
+	{
+		x <<- y
+		i <<- NULL
+	}
+
+
+	get <- function()
+	{
+		x
+	}
+
+
+	setInverse <- function(solve)
+	{
+		i <<- solve
+	}
+
+
+	getInverse <- function()
+	{
+		i
+	}
+
+
+	list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
+
+
 
 
 ## Write a short comment describing this function
